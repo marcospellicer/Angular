@@ -1,0 +1,15 @@
+<div  class="container">
+  <div class="row">
+    <div *ngFor="let item of getHeroes();let i = index" class="card col-4 m" style="width: 18rem;">
+        <img class="card-img-top" [src]=item.img alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nombre}}</h5>
+          <p class="card-text">{{item.bio}}</p>
+          <div class="card-text">
+            <small class="calss-muted">{{item.aparicion}}</small>
+          </div>
+          <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">ver</a>
+        </div>
+      </div>
+    </div>
+</div>
